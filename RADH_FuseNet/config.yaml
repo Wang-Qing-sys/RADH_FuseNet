@@ -1,0 +1,10 @@
+
+model:
+  modalities: 5
+  hidden_dim: 96
+  classes: 5
+
+training:
+  lr: 0.0002
+  stage1_epochs: 50
+  stage2_epochs: 100
