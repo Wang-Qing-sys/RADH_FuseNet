@@ -1,4 +1,3 @@
-"""Frozen-checkpoint, held-out evaluation and transparent metric definitions."""
 from __future__ import annotations
 
 import json
