@@ -1,19 +1,3 @@
-"""Reliability-discounted evidential classification and NIG prediction.
-
-There are exactly four affective voters: PPG, PPS, RSP, and the global head.
-Humidity streams are context, not additional voters. For C classes, an opinion
-has b_c = e_c / (sum(e) + C), u = C / (sum(e) + C). Reliability discounting
-uses b' = r b and u' = 1 - r + r u. Opinions are combined in descending
-reliability order, separately for every batch item.
-
-Reference conflict rule: below the configured threshold, normalize conjunctive
-mass (Dempster); at/above it, transfer all conflicting mass to uncertainty
-(Yager). Equation (38) leaves eta(K) undefined; we choose eta(K)=1[K>=threshold]
-and normalize the resulting total mass, matching the accompanying prose.
-This hard switch is an explicit choice, not an inferred fitted constant.
-Numerical mass floors keep the equivalent Dirichlet finite.
-"""
-
 from __future__ import annotations
 
 from typing import Mapping
