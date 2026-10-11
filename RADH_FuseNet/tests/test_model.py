@@ -1,4 +1,3 @@
-"""Architecture, missingness, causal-block, and checkpoint regression tests."""
 import io
 import unittest
 
