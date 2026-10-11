@@ -1,5 +1,4 @@
 {
-  "description": "Optional WESAD chest five-role adaptation; 3 labels baseline/stress/amusement; humidity disabled. No invented continuous intensity labels. Generic singleton physiological priors and context/global groups; fs32 quality bands are explicit illustrative adaptation choices, not published WESAD settings.",
   "model": {
     "num_classes": 3,
     "horizon": 1,
