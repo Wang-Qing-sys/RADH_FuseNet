@@ -1,4 +1,3 @@
-"""Subject separation, mask handling, and train-only normalization checks."""
 import json
 import tempfile
 import unittest
