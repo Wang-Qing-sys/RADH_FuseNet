@@ -1,4 +1,3 @@
-"""Validated window data, participant-level partitions, and explicit demo data."""
 from __future__ import annotations
 
 import hashlib
