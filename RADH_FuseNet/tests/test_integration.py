@@ -1,4 +1,3 @@
-"""Fast CPU end-to-end tests. All generated data and checkpoints are synthetic."""
 import csv
 import json
 import math
