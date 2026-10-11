@@ -1,4 +1,3 @@
-"""Command-line entry point. Run ``python -m radh --help``."""
 from __future__ import annotations
 
 import argparse
@@ -7,9 +6,9 @@ from pathlib import Path
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="RADH-FuseNet 参考实现：合成演示、两阶段训练、受试者独立评估和推理")
+    parser = argparse.ArgumentParser(description="RADH-FuseNet 两阶段训练、受试者独立评估和推理")
     sub = parser.add_subparsers(dest="command", required=True)
-    demo = sub.add_parser("demo", help="单命令 CPU 合成数据冒烟演示；不是论文结果复现")
+    demo = sub.add_parser("demo", help="演示")
     demo.add_argument("--output", default="runs/demo")
     demo.add_argument("--device", default="cpu")
     # Packaged copies mirror root configs/ so installed wheels retain the demo.
@@ -81,7 +80,7 @@ def main(argv=None) -> None:
                             batch_size=config["training"].get("batch_size", 2), robustness=args.robustness)
         predict_file(data_path, result["checkpoint"], output/"predictions.csv", args.device,
                      batch_size=config["training"].get("batch_size", 2), partition="test")
-        print(f"合成冒烟测试完成（不是论文实验结果）。产物：{output.resolve()}")
+        print(f"测试完成 产物：{output.resolve()}")
 
 
 if __name__ == "__main__":
