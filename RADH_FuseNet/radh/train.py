@@ -1,4 +1,3 @@
-"""Two-stage training with participant-separated validation and checkpoints."""
 from __future__ import annotations
 
 import json
