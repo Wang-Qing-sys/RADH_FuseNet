@@ -1,19 +1,3 @@
-"""RADH-FuseNet: executable, manuscript-grounded PyTorch reference model.
-
-Input channel order is always PPG, PPS, RSP, EHS, RHS. Environmental channels
-have their own encoders but no affect classifier. They influence compensation,
-quality and relational context only. A window without physiological input
-returns a uniform class distribution and total uncertainty, even if humidity
-channels remain present.
-
-This is an offline-window reference, not author-provided training code or an
-exact numerical reproduction. Table 2 dimensions/topology are respected;
-unreported SQI thresholds, parameterizations and sparse incidence details are
-explicit implementation choices. The SSM is an actual selective diagonal
-state-space recurrence, implemented in portable PyTorch rather than a fused
-Mamba kernel. Upstream synchronization, antialias resampling and sensor-specific
-wavelet filtering must be performed before calling this model.
-"""
 from __future__ import annotations
 
 from dataclasses import dataclass
