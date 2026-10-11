@@ -1,9 +1,3 @@
-#!/usr/bin/env python3
-"""Prepare one-subject, one-session CSV recordings into masked window NPZ.
-
-Every file is independent: no window, interpolation, filtering, or alignment
-crosses a file boundary. Concrete window/filter choices are user policies.
-"""
 from __future__ import annotations
 
 import argparse
@@ -133,9 +127,9 @@ def main():
     p.add_argument("--horizon-step", type=int, default=1, help="连续目标之间的重采样样本间隔")
     p.add_argument("--label-purity", type=float, default=.8)
     p.add_argument("--minimum-observed", type=float, default=.25)
-    p.add_argument("--pulse-band", nargs=2, type=float, help="可选脉搏带通下限/上限 Hz；论文未给出固定值")
+    p.add_argument("--pulse-band", nargs=2, type=float, help="可选脉搏带通下限/上限 Hz")
     p.add_argument("--humidity-detrend-seconds", type=float)
-    p.add_argument("--wavelet", action="store_true", help="可选，需要 PyWavelets")
+    p.add_argument("--wavelet", action="store_true", help="需要 PyWavelets")
     p.add_argument("--align-max-lag", type=int, default=0, help="可选，PPG/PPS 有限互相关对齐的最大样本偏移")
     args = p.parse_args()
     if min(args.source_hz, args.target_hz, args.window, args.stride, args.horizon, args.horizon_step) <= 0:
