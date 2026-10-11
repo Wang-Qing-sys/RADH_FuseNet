@@ -1,0 +1,51 @@
+{
+  "description": "Tiny synthetic smoke-test configuration; not study hyperparameters or scientific evidence.",
+  "model": {
+    "num_classes": 5,
+    "horizon": 4,
+    "hidden_dim": 16,
+    "shared_dim": 8,
+    "private_dim": 8,
+    "patch_size": 8,
+    "ssm_depth": 1,
+    "state_dim": 4,
+    "ssm_expansion": 2,
+    "hypergraph_layers": 1,
+    "top_k": 2,
+    "temporal_depths": [
+      1,
+      1,
+      1
+    ],
+    "dropout": 0.1,
+    "humidity_compensation": true,
+    "conflict_threshold": 0.4,
+    "sampling_rate": 32,
+    "n_fft": 16,
+    "reliability_ema": 0.8
+  },
+  "training": {
+    "seed": 42,
+    "pretrain_epochs": 1,
+    "finetune_epochs": 1,
+    "batch_size": 2,
+    "learning_rate": 0.0002,
+    "weight_decay": 0.01,
+    "warmup_epochs": 1,
+    "gradient_clip": 1.0,
+    "modality_dropout": 0.2,
+    "corruption_severity": 0.35,
+    "span_mask_fraction": 0.15,
+    "span_length": 8,
+    "val_fraction": 0.15,
+    "test_fraction": 0.15,
+    "normalization_clip": 20.0,
+    "cpu_threads": 1
+  },
+  "loss": {},
+  "demo": {
+    "samples": 128,
+    "subjects": 6,
+    "windows_per_subject": 5
+  }
+}

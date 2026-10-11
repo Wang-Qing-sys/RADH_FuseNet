@@ -1,0 +1,14 @@
+{
+  "val": [
+    "demo_subject_03"
+  ],
+  "test": [
+    "demo_subject_02"
+  ],
+  "train": [
+    "demo_subject_05",
+    "demo_subject_04",
+    "demo_subject_01",
+    "demo_subject_00"
+  ]
+}

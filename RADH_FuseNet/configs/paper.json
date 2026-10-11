@@ -1,0 +1,46 @@
+{
+  "description": "Paper Table 2 architecture and stated optimizer. Unspecified acquisition/training settings below are engineering assumptions, not recovered study settings.",
+  "model": {
+    "num_classes": 5,
+    "horizon": 4,
+    "hidden_dim": 96,
+    "shared_dim": 64,
+    "private_dim": 32,
+    "patch_size": 32,
+    "ssm_depth": 4,
+    "state_dim": 16,
+    "ssm_expansion": 2,
+    "hypergraph_layers": 2,
+    "top_k": 2,
+    "temporal_depths": [
+      1,
+      2,
+      6
+    ],
+    "dropout": 0.1,
+    "humidity_compensation": true,
+    "conflict_threshold": 0.4,
+    "sampling_rate": 32,
+    "n_fft": 64,
+    "reliability_ema": 0.8
+  },
+  "training": {
+    "seed": 42,
+    "pretrain_epochs": 20,
+    "finetune_epochs": 50,
+    "batch_size": 16,
+    "learning_rate": 0.0002,
+    "weight_decay": 0.01,
+    "warmup_epochs": 5,
+    "gradient_clip": 1.0,
+    "modality_dropout": 0.2,
+    "corruption_severity": 0.35,
+    "span_mask_fraction": 0.15,
+    "span_length": 32,
+    "val_fraction": 0.15,
+    "test_fraction": 0.15,
+    "normalization_clip": 20.0,
+    "cpu_threads": 2
+  },
+  "loss": {}
+}

@@ -1,0 +1,53 @@
+test_constant_or_entirely_missing_channel_is_finite (test_data.DataTests.test_constant_or_entirely_missing_channel_is_finite) ... ok
+test_explicit_subject_leakage_is_rejected (test_data.DataTests.test_explicit_subject_leakage_is_rejected) ... ok
+test_invalid_class_target_is_rejected (test_data.DataTests.test_invalid_class_target_is_rejected) ... ok
+test_invalid_shapes_and_target_horizon_are_rejected (test_data.DataTests.test_invalid_shapes_and_target_horizon_are_rejected) ... ok
+test_masked_values_do_not_affect_fit_or_transform (test_data.DataTests.test_masked_values_do_not_affect_fit_or_transform) ... ok
+test_nonfinite_samples_become_unavailable (test_data.DataTests.test_nonfinite_samples_become_unavailable) ... ok
+test_normalizer_serialization_roundtrip (test_data.DataTests.test_normalizer_serialization_roundtrip) ... ok
+test_npz_requires_subject_identifiers (test_data.DataTests.test_npz_requires_subject_identifiers) ... ok
+test_npz_supports_missing_regression_and_classification_labels (test_data.DataTests.test_npz_supports_missing_regression_and_classification_labels) ... ok
+test_subject_split_disjoint_complete_and_reproducible (test_data.DataTests.test_subject_split_disjoint_complete_and_reproducible) ... ok
+test_train_only_normalization_ignores_held_out_values (test_data.DataTests.test_train_only_normalization_ignores_held_out_values) ... ok
+test_alignment_is_bounded_without_circular_wrap (test_data.PreprocessingTests.test_alignment_is_bounded_without_circular_wrap) ... ok
+test_resampling_does_not_read_hidden_values (test_data.PreprocessingTests.test_resampling_does_not_read_hidden_values) ... ok
+test_resampling_preserves_long_gap (test_data.PreprocessingTests.test_resampling_preserves_long_gap) ... ok
+test_all_unavailable_is_vacuous_and_backward_is_finite (test_evidential.EvidentialTests.test_all_unavailable_is_vacuous_and_backward_is_finite) ... ok
+test_conflict_transferred_to_uncertainty (test_evidential.EvidentialTests.test_conflict_transferred_to_uncertainty) ... ok
+test_low_conflict_normalized_conjunctive_equation (test_evidential.EvidentialTests.test_low_conflict_normalized_conjunctive_equation) ... ok
+test_nig_matches_student_t (test_evidential.EvidentialTests.test_nig_matches_student_t) ... ok
+test_opinion_equations_and_discount (test_evidential.EvidentialTests.test_opinion_equations_and_discount) ... ok
+test_reject_extra_environmental_voters (test_evidential.EvidentialTests.test_reject_extra_environmental_voters) ... ok
+test_sorted_and_finite_large_evidence (test_evidential.EvidentialTests.test_sorted_and_finite_large_evidence) ... ok
+test_command_line_help (test_integration.IntegrationTests.test_command_line_help) ... ok
+test_missing_target_modes_are_finite_with_optimizer_updates (test_integration.IntegrationTests.test_missing_target_modes_are_finite_with_optimizer_updates) ... ok
+test_two_stage_cli_demo_updates_weights_and_roundtrips_predictions (test_integration.IntegrationTests.test_two_stage_cli_demo_updates_weights_and_roundtrips_predictions) ... ok
+test_hinge_ordering_and_all_missing_objective (test_losses.LossTests.test_hinge_ordering_and_all_missing_objective) ... /workspace/scratch/964c57efdc32/pytorch_paper/RADH_FuseNet/tests/test_losses.py:103: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  self.assertEqual(float(loss["ranking"]), 0)
+ok
+test_missing_contrastive_negatives_are_explicit (test_losses.LossTests.test_missing_contrastive_negatives_are_explicit) ... ok
+test_nan_regression_targets_and_missing_labels_have_finite_gradients (test_losses.LossTests.test_nan_regression_targets_and_missing_labels_have_finite_gradients) ... ok
+test_nig_nll_matches_distribution (test_losses.LossTests.test_nig_nll_matches_distribution) ... ok
+test_orthogonality_accepts_different_widths_and_missing_tokens (test_losses.LossTests.test_orthogonality_accepts_different_widths_and_missing_tokens) ... ok
+test_reconstruction_is_masked_l1_in_decoder_coordinates (test_losses.LossTests.test_reconstruction_is_masked_l1_in_decoder_coordinates) ... ok
+test_wholly_missing_reconstruction_ignored_and_tiny_scale_bounded (test_losses.LossTests.test_wholly_missing_reconstruction_ignored_and_tiny_scale_bounded) ... ok
+test_cross_scale_temporal_module_is_future_invariant (test_model.BlockTests.test_cross_scale_temporal_module_is_future_invariant) ... ok
+test_selective_ssm_is_future_invariant (test_model.BlockTests.test_selective_ssm_is_future_invariant) ... ok
+test_unavailable_hypergraph_nodes_have_zero_incidence (test_model.BlockTests.test_unavailable_hypergraph_nodes_have_zero_incidence) ... ok
+test_all_missing_and_context_only_are_exact_ignorance (test_model.ModelTests.test_all_missing_and_context_only_are_exact_ignorance) ... ok
+test_compact_odd_sequence_forward_backward_and_four_opinions (test_model.ModelTests.test_compact_odd_sequence_forward_backward_and_four_opinions) ... ok
+test_configuration_and_input_validation (test_model.ModelTests.test_configuration_and_input_validation) ... ok
+test_constant_observed_and_all_missing_backward_remain_finite (test_model.ModelTests.test_constant_observed_and_all_missing_backward_remain_finite) ... ok
+test_default_manuscript_architecture_forward_backward (test_model.ModelTests.test_default_manuscript_architecture_forward_backward) ... ok
+test_external_sensor_configuration_without_humidity (test_model.ModelTests.test_external_sensor_configuration_without_humidity) ... ok
+test_fully_hidden_patch_reconstructs_from_observed_context (test_model.ModelTests.test_fully_hidden_patch_reconstructs_from_observed_context) ... ok
+test_masked_values_and_nonfinite_hidden_samples_cannot_change_output (test_model.ModelTests.test_masked_values_and_nonfinite_hidden_samples_cannot_change_output) ... ok
+test_missing_source_has_zero_reliability (test_model.ModelTests.test_missing_source_has_zero_reliability) ... ok
+test_state_dict_save_reload_preserves_predictions (test_model.ModelTests.test_state_dict_save_reload_preserves_predictions) ... ok
+test_unmasked_nonfinite_samples_are_treated_as_missing (test_model.ModelTests.test_unmasked_nonfinite_samples_are_treated_as_missing) ... ok
+
+----------------------------------------------------------------------
+Ran 45 tests in 22.324s
+
+OK

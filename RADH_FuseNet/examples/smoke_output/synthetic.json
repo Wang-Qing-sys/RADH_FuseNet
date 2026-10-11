@@ -1,0 +1,15 @@
+{
+  "kind": "synthetic_smoke_test_only",
+  "seed": 42,
+  "subjects": 6,
+  "windows_per_subject": 5,
+  "sample_hz": 32,
+  "channels": [
+    "PPG",
+    "PPS",
+    "RSP",
+    "EHS",
+    "RHS"
+  ],
+  "warning": "Simulated data; not the manuscript dataset and not scientific replication."
+}

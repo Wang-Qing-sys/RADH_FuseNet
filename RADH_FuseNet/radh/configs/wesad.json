@@ -1,0 +1,90 @@
+{
+  "description": "Optional WESAD chest five-role adaptation; 3 labels baseline/stress/amusement; humidity disabled. No invented continuous intensity labels. Generic singleton physiological priors and context/global groups; fs32 quality bands are explicit illustrative adaptation choices, not published WESAD settings.",
+  "model": {
+    "num_classes": 3,
+    "horizon": 1,
+    "hidden_dim": 96,
+    "shared_dim": 64,
+    "private_dim": 32,
+    "patch_size": 32,
+    "ssm_depth": 4,
+    "state_dim": 16,
+    "ssm_expansion": 2,
+    "hypergraph_layers": 2,
+    "top_k": 2,
+    "temporal_depths": [
+      1,
+      2,
+      6
+    ],
+    "dropout": 0.1,
+    "humidity_compensation": false,
+    "conflict_threshold": 0.4,
+    "sampling_rate": 32,
+    "n_fft": 64,
+    "reliability_ema": 0.8,
+    "prior_groups": [
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    ],
+    "quality_bands": [
+      [
+        0.5,
+        15.0
+      ],
+      [
+        0.01,
+        0.5
+      ],
+      [
+        0.05,
+        1.0
+      ],
+      [
+        0,
+        0.1
+      ],
+      [
+        0.1,
+        10.0
+      ]
+    ]
+  },
+  "training": {
+    "seed": 42,
+    "pretrain_epochs": 20,
+    "finetune_epochs": 50,
+    "batch_size": 16,
+    "learning_rate": 0.0002,
+    "weight_decay": 0.01,
+    "warmup_epochs": 5,
+    "gradient_clip": 1.0,
+    "modality_dropout": 0.2,
+    "corruption_severity": 0.35,
+    "span_mask_fraction": 0.15,
+    "span_length": 32,
+    "val_fraction": 0.15,
+    "test_fraction": 0.15,
+    "normalization_clip": 20.0,
+    "cpu_threads": 2
+  },
+  "loss": {}
+}
