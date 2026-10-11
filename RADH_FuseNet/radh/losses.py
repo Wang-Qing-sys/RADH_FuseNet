@@ -1,18 +1,3 @@
-"""Explicit, mask-aware reference objectives for RADH-FuseNet.
-
-Equation (19) specifies L1 reconstruction and shared/private cross-Gram
-orthogonality. Equation (40) lists objective families but does not give their
-functional forms or weights. The choices below are consequently reference
-implementations, not recovered author hyperparameters: expected Dirichlet
-cross-entropy + annealed incorrect-evidence KL; Student-t NLL + NIG evidence
-regularization; symmetric cross-source InfoNCE; clean/mild/strong hinge ranking;
-reliability-to-correctness BCE; and explicit temporal penalties.
-
-Every missing supervision source is masked. ``RADHLoss.last_status`` records
-why a term was inactive; a returned zero for absent labels/negatives is not a
-claim that this term was optimized. All-empty batches remain differentiable.
-"""
-
 from __future__ import annotations
 
 from dataclasses import asdict, dataclass
