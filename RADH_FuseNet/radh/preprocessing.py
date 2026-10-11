@@ -1,9 +1,3 @@
-"""Mask-aware preprocessing policies.
-
-These concrete filter/gap/alignment choices are implementation assumptions because
-Sections 3/4 do not supply enough numerical detail to reproduce acquisition.
-They never fit parameters on validation or test subjects.
-"""
 from __future__ import annotations
 
 from dataclasses import dataclass
