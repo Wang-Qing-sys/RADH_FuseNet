@@ -1,4 +1,3 @@
-"""CSV prediction with evidential uncertainty and NIG predictive variance."""
 from __future__ import annotations
 
 import csv
