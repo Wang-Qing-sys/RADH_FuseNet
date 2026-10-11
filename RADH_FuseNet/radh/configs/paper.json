@@ -1,5 +1,4 @@
 {
-  "description": "Paper Table 2 architecture and stated optimizer. Unspecified acquisition/training settings below are engineering assumptions, not recovered study settings.",
   "model": {
     "num_classes": 5,
     "horizon": 4,
