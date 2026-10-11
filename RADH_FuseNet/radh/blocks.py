@@ -1,13 +1,3 @@
-"""Portable building blocks for the RADH-FuseNet manuscript reference.
-
-Only PyTorch is required. ``SelectiveSSMBlock`` implements an input-dependent,
-causal diagonal state-space recurrence with an explicit scan. It is not a fused
-Mamba kernel, and no claim of matching a particular Mamba release is made.
-The spectral branch is a full-window STFT encoder, so the complete network is
-an offline-window model even though the SSM and multiscale temporal paths are
-causal. Sparse hypergraph incidences use scatter operations; there is no N x N
-attention matrix or torch-geometric dependency.
-"""
 from __future__ import annotations
 
 import math
